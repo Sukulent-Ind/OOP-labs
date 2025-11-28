@@ -1,15 +1,15 @@
 package labi_java.laba3.classes;
 
-abstract class Transport {
+public abstract class Transport {
 
-    int price; // цена билета
-    int time; // время поездки
+    protected int price; // цена билета
+    protected int time; // время поездки
 
 
-    Transport(int time, int price) {
+    protected Transport(int time, int price) {
         this.time = time;
         this.price = price;
     }
 
-    abstract int driveCost(int passengers);
+    public abstract int driveCost(int passengers);
 }

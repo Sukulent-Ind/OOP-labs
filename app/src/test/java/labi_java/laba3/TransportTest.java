@@ -18,7 +18,7 @@ public class TransportTest {
         int time = 1000;
         int price = 13500;
         boolean buisnessClass = false;
-        Airplane airplane = new Airplane(time, price, buisnessClass);
+        Transport airplane = new Airplane(time, price, buisnessClass);
         int guessCost = 10 * time * price / passengers;
 
         //Act
@@ -36,7 +36,7 @@ public class TransportTest {
         int time = 1000;
         int price = 13500;
         boolean buisnessClass = true;
-        Airplane airplane = new Airplane(time, price, buisnessClass);
+        Transport airplane = new Airplane(time, price, buisnessClass);
         int guessCost = 2000 * time * price / passengers;
 
         //Act
@@ -54,7 +54,7 @@ public class TransportTest {
         int time = 1000;
         int price = 13500;
         boolean buisnessClass = false;
-        Airplane airplane = new Airplane(time, price, buisnessClass);
+        Transport airplane = new Airplane(time, price, buisnessClass);
 
         //Act
         //Assert
@@ -69,7 +69,7 @@ public class TransportTest {
         int time = 200;
         int price = 13500;
         int places = 20;
-        Bus bus = new Bus(time, price, places);
+        Transport bus = new Bus(time, price, places);
         int guessCost = time * price / places * passengers;
 
         //Act
@@ -87,7 +87,7 @@ public class TransportTest {
         int price = 13500;
         int places = 20;
         int passengers = 0;
-        Bus bus = new Bus(time, price, places);
+        Transport bus = new Bus(time, price, places);
 
         //Act
         //Assert
@@ -102,7 +102,7 @@ public class TransportTest {
         int time = 200;
         int price = 13500;
         int places = 20;
-        Trolebus trolebus = new Trolebus(time, price, places);
+        Transport trolebus = new Trolebus(time, price, places);
         int guessCost = price / places * passengers;
 
         //Act
@@ -120,7 +120,7 @@ public class TransportTest {
         int price = 13500;
         int places = 20;
         int passengers = 0;
-        Trolebus trolebus = new Trolebus(time, price, places);
+        Transport trolebus = new Trolebus(time, price, places);
 
         //Act
         //Assert
@@ -135,7 +135,7 @@ public class TransportTest {
         int time = 1700;
         int price = 50;
         boolean premiumClass = false;
-        Taxi taxi = new Taxi(time, price, premiumClass);
+        Transport taxi = new Taxi(time, price, premiumClass);
         int guessCost = time * price / passengers;
 
         //Act
@@ -153,7 +153,7 @@ public class TransportTest {
         int time = 1700;
         int price = 50;
         boolean premiumClass = true;
-        Taxi taxi = new Taxi(time, price, premiumClass);
+        Transport taxi = new Taxi(time, price, premiumClass);
         int guessCost = time * price * 100000 / passengers;
         //Act
         int driveCost = taxi.driveCost(passengers);
@@ -170,7 +170,7 @@ public class TransportTest {
         int time = 1700;
         int price = 50;
         boolean premiumClass = true;
-        Taxi taxi = new Taxi(time, price, premiumClass);
+        Transport taxi = new Taxi(time, price, premiumClass);
 
         //Act
         //Assert
