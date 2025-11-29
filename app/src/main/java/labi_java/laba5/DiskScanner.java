@@ -10,11 +10,9 @@ import java.util.List;
 public class DiskScanner {
     public static void main(String[] args) {
         List<String> docs = new ArrayList<>();
-        
-        // Получаем корневые диски (для Windows)
+
         File[] roots = File.listRoots();
         
-        // Создаем FileVisitor для обработки файлов
         FileVisitor<Path> visitor = new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) {
@@ -26,12 +24,11 @@ public class DiskScanner {
 
             @Override
             public FileVisitResult visitFileFailed(Path file, IOException exc) {
-                // Пропускаем файлы с ошибками доступа
                 return FileVisitResult.CONTINUE;
             }
         };
 
-        // Обходим каждый корневой диск
+
         for (File root : roots) {
             try {
                 Files.walkFileTree(root.toPath(), visitor);
@@ -40,7 +37,7 @@ public class DiskScanner {
             }
         }
 
-        // Сохраняем результаты в файл
+
         Path output = Paths.get("files.txt");
         try {
             Files.write(output, docs);

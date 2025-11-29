@@ -21,7 +21,7 @@ public class Main {
         try(FileOutputStream fos=new FileOutputStream("notes.txt"))
         {
             for (int i = 0; i < names.length; i++) {
-                String text = names[i] + " " + surnames[i] + "\n";
+                String text = names[i] + " " + surnames[i] + System.lineSeparator();
                 byte[] buffer = text.getBytes();
                 fos.write(buffer, 0, buffer.length);
             }
